@@ -19,7 +19,7 @@ const Dropdown: FC<IDropdownProps> = ({button, children, isOpen, onOpen=NOOP, on
         setIsDropdownOpen(isOpen)
     }, [isOpen])
 
-    useEffect(()=> {isDropdownOpen ? onOpen() : onClose}, [isDropdownOpen])
+    React.useEffect(() => isDropdownOpen ? onOpen() : onClose(), [isDropdownOpen])
 
     const handleOpen = () => {
         if (isOpen === undefined){

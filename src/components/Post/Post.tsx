@@ -1,7 +1,7 @@
 import React, {FC, useEffect, useRef} from 'react';
 import ReactDOM from "react-dom";
 import styles from "./Post.module.css";
-import CommentForm from "../CommentForm/CommentForm";
+import CommentFormContainer from "../CommentFormContainer/CommentFormContainer";
 
 interface IPostProps {
     onClose?: ()=> void
@@ -33,7 +33,7 @@ const Post:FC<IPostProps> = ({onClose}) => {
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolore nam voluptatibus?</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem dolore nam voluptatibus?</p>
             </div>
-            <CommentForm/>
+            <CommentFormContainer/>
         </div>
     ), node)
 
