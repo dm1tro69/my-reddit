@@ -1,0 +1,36 @@
+.form {
+    border-top: 1px solid var(--grayD9);
+    border-bottom: 1px solid var(--grayD9);
+    padding: 70px 0;
+    margin-bottom: 53px;
+}
+
+.input {
+    width: 100%;
+    resize: none;
+    min-height: 90px;
+    outline: none;
+    border: 1px solid var(--grayD9);
+    background: var(--white);
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    border-radius: 7px;
+    color: var(--gray99);
+    padding: 16px;
+    margin-bottom: 10px;
+}
+
+.button {
+    display: block;
+    margin-left: auto;
+    padding: 10px;
+    border-radius: 4px;
+    background: var(--orange);
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: var(--white);
+    border: none;
+}

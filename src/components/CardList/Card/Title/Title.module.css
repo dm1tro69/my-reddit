@@ -1,0 +1,36 @@
+.title {
+    margin: 0;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.postLink {
+    text-decoration: none;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    margin-bottom: 13px;
+    min-height: 38px;
+    min-width: 360px;
+}
+
+
+@media all and (min-width: 1024px) {
+    .postLink {
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+@media all and (min-width: 1540px) {
+    .postLink:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+    }
+}

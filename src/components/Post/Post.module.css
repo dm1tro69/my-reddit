@@ -1,0 +1,77 @@
+.modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 40px);
+    min-height: 50%;
+    background-color: var(--white);
+    padding: 20px;
+    z-index: 1;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.15);
+    border-radius: 7px;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+}
+
+.title {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    color: var(--black);
+    margin: 0 0 10px;
+}
+
+.headerContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.karmaValue {
+    margin-right: 4px;
+    color: var(--greyC4);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.karmaCounter {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.createdAt,
+.publishedLabel {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    color: var(--grey99);
+    margin-right: 10px;
+}
+
+
+.titleWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.avatarWrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.avatar {
+    height: 20px;
+    width: auto;
+    margin-right: 10px;
+}
+
+.userLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
