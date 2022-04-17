@@ -10,7 +10,7 @@ export const userContext = createContext<IUserContextData>({})
 
 
 export function UserContextProvider({children}: {children: ReactNode}) {
-    const [data] = useUserData()
+    const {data} = useUserData()
     return (
        <userContext.Provider value={data}>
            {children}

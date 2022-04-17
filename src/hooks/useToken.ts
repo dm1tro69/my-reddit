@@ -1,7 +1,14 @@
 import {useEffect, useState} from "react";
+import {useDispatch} from "react-redux";
+import {getToken} from "../components/store/reducer";
+
+
+
 
 export function useToken() {
     const [token, setToken] = useState('')
+   const dispatch = useDispatch()
+
 
     const url = new URL(window.location.href)
     const hash = url.hash.substring(url.hash.indexOf('#') + 1);
@@ -12,6 +19,8 @@ export function useToken() {
     useEffect(()=> {
         if (token_data){
             setToken(token_data)
+            dispatch(getToken(token_data))
+
         }
     }, [])
 

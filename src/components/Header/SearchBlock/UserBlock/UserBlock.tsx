@@ -9,7 +9,7 @@ interface IUserBlockProps {
     loading?: boolean;
 }
 
-const UserBlock: FC<IUserBlockProps> = ({avatarSrc, username}) => {
+const UserBlock: FC<IUserBlockProps> = ({avatarSrc, username, loading}) => {
     return (
         <a href="https://www.reddit.com/api/v1/authorize?client_id=_WLTijAbejU5SOprOHBAVw&response_type=token&
     state=random_string&redirect_uri=http://localhost:3000&scope=read submit identity&state=put">
@@ -19,7 +19,12 @@ const UserBlock: FC<IUserBlockProps> = ({avatarSrc, username}) => {
 
            </div>
             <div className={styles.username}>
-                <Text size={20} color={EColor.black}>{username || 'Аноним'}</Text>
+                {loading ? (
+                    <Text size={20} color={EColor.black}>Loading...</Text>
+                ): (
+                    <Text size={20} color={EColor.black}>{username || 'Аноним'}</Text>
+                ) }
+
             </div>
         </div>
         </a>

@@ -20,6 +20,9 @@
     padding: 16px;
     margin-bottom: 10px;
 }
+.input[aria-invalid] {
+    border-color: red;
+}
 
 .button {
     display: block;
