@@ -1,28 +1,22 @@
-import React, {ChangeEvent, FC, useState} from 'react';
+import React, {FC} from 'react';
 import styles from "./Title.module.css";
-import Post from "../../../Post/Post";
+import {Link} from "react-router-dom";
 
 interface ITitleProps {
     title: string
 }
 
 const Title: FC<ITitleProps> = (title) => {
-    const [isModalOpened, setIsModalOpened] = useState(false)
 
 
-    const handleModalOpened = (e: any) => {
-      e.stopPropagation()
-        setIsModalOpened(true)
-    }
+
 
     return (
         <h2 className={styles.title}>
-            <a href="#post.url" className={styles.postLink} onClick={handleModalOpened}>
+            <Link to="/posts/1" className={styles.postLink} >
                 {title.title}
-            </a>
-            {isModalOpened && (
-                <Post onClose={()=> setIsModalOpened(false)}/>
-            )}
+            </Link>
+
         </h2>
     );
 };
