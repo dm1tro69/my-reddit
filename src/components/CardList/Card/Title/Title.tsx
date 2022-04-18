@@ -1,9 +1,14 @@
-import React, {ChangeEvent, useState} from 'react';
+import React, {ChangeEvent, FC, useState} from 'react';
 import styles from "./Title.module.css";
 import Post from "../../../Post/Post";
 
-const Title = () => {
+interface ITitleProps {
+    title: string
+}
+
+const Title: FC<ITitleProps> = (title) => {
     const [isModalOpened, setIsModalOpened] = useState(false)
+
 
     const handleModalOpened = (e: any) => {
       e.stopPropagation()
@@ -13,7 +18,7 @@ const Title = () => {
     return (
         <h2 className={styles.title}>
             <a href="#post.url" className={styles.postLink} onClick={handleModalOpened}>
-                А также базовые сценарии поведения пользователей сервиса.
+                {title.title}
             </a>
             {isModalOpened && (
                 <Post onClose={()=> setIsModalOpened(false)}/>

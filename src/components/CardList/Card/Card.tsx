@@ -1,9 +1,13 @@
-import React from 'react';
+import React, {FC} from 'react';
 import styles from "./Card.module.css";
 import Menu from "./Menu/Menu";
 import Title from "./Title/Title";
 
-const Card = () => {
+interface ICardProps {
+    title: string
+}
+
+const Card: FC<ICardProps> = ({title}) => {
 
     return (
         <li className={styles.card}>
@@ -20,7 +24,7 @@ const Card = () => {
                         <span className={styles.publishedLabel}>опубликовано</span>
                         4 часа назад</span>
                 </div>
-                   <Title/>
+                   <Title title={title}/>
             </div>
 
             <div className={styles.preview}>

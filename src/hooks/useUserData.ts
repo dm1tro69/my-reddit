@@ -15,7 +15,6 @@ export function useUserData() {
     // const [data, setData] = useState<IUserData>({})
     const data = useSelector<RootState, IUserData>((state) => state.me.data)
     const loading = useSelector<RootState, boolean>((state) => state.me.loading)
-    console.log(data)
 
     const dispatch = useDispatch()
     const token = useSelector((state: RootState) => state.token)
